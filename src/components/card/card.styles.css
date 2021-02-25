@@ -5,7 +5,7 @@
   border: 1px solid whitesmoke;
   border-radius: 5px;
   padding: 25px;
-  cursor:zoom-in;
+  cursor:context-menu;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translate(0);
