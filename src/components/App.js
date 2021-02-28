@@ -13,14 +13,20 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(response => response.json())
-      .then(users => this.setState({ monsters: users }));
-  }
+  // componentDidMount() {
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then(response => response.json())
+  //     .then(users => this.setState({ monsters: users }));
+  // }
 
   handleChange = e => {
     this.setState({ searchField: e.target.value })
+  }
+
+  async componentDidMount() {
+    const response = await fetch('https://tfdyxyrcw3.execute-api.us-east-1.amazonaws.com/Development/');
+    const body = await response.json();
+    this.setState({monsters: body})
   }
 
   render() {
